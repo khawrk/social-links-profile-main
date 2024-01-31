@@ -21,7 +21,7 @@ body {
 }
 body .wrapper {
   margin: auto;
-  width: 90%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -29,7 +29,7 @@ body .wrapper {
 body .wrapper #displayCard {
   max-width: 500px;
   height: 100%;
-  margin: auto;
+  margin: 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,34 +38,35 @@ body .wrapper #displayCard {
   background-color: #1f1f1f;
   border-radius: 20px;
 }
-@media screen and (min-width: 600px) {
-  body .wrapper #displayCard {
-    width: 100%;
-  }
-}
 body .wrapper #displayCard img {
+  width: 100px;
+  height: 100px;
   margin-top: 1rem;
   border-radius: 50%;
 }
 body .wrapper #displayCard h1 {
   color: #fcfcfc;
   margin-bottom: 0;
+  font-size: 1.5rem;
 }
 body .wrapper #displayCard h3 {
   color: #afcc45;
   margin-bottom: 0.5rem;
+  font-size: 1rem;
 }
 body .wrapper #displayCard p {
   color: #919191;
   margin-bottom: 0;
+  font-size: small;
 }
 body .wrapper #displayCard ul {
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  width: 90%;
-  padding: 0 4rem;
+  min-width: 100%;
+  padding: 0 2rem;
+  flex-shrink: 0;
 }
 body .wrapper #displayCard ul div {
   background-color: #333333;
@@ -87,11 +88,40 @@ body .wrapper #displayCard ul div li {
   color: #f9f9f9;
   text-align: center;
   font-size: small;
+  width: 100%;
 }
 body .wrapper #displayCard ul div li a {
   text-decoration: none;
   color: #f9f9f9;
   font-weight: bold;
+}
+@media screen and (min-width: 600px) {
+  body .wrapper #displayCard {
+    width: 500px;
+    margin: auto;
+  }
+  body .wrapper #displayCard img {
+    margin-top: 1rem;
+    border-radius: 50%;
+    width: auto;
+    height: auto;
+  }
+  body .wrapper #displayCard h1 {
+    font-size: auto;
+  }
+  body .wrapper #displayCard h3 {
+    font-size: auto;
+  }
+  body .wrapper #displayCard p {
+    font-size: medium;
+  }
+  body .wrapper #displayCard ul {
+    width: 90%;
+    padding: 0 5rem;
+  }
+  body .wrapper #displayCard ul div {
+    width: 100%;
+  }
 }
 body .wrapper .attribution {
   margin-top: 1rem;
